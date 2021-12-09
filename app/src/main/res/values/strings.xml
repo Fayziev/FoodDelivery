@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Food Delivery</string>
+
+
+    <string name="change_language">Выберите язык</string>
+
+    <string name="text_rus">Русский</string>
+
+    <string name="text_uzb">O\'zbekcha</string>
+
+    <string name="evos_clone">Evos clone</string>
+
+    <string name="change_city">Viloyatingizni tanlang</string>
+
+    <string name="deal">Bitim</string>
+
+    <string name="text_deal">Siz xoxlagan narsangizni qilsangiz bo\'ladi, chunki bu o\'zimizdan tashqariga chiqmaydi</string>
+
+    <string name="next">Keyingisi</string>
+
+    <string name="action">Stocks</string>
+
+    <string name="to_basket">+Savatga</string>
+
+    <string name="popular">Popular orders</string>
+
+    <string name="go_to_menu">View menu</string>
+
+    <string name="clear_favorite">Ro\'yxatni tozalash</string>
+
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="title_activity_bottom_nav">BottomNavActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Favourite</string>
+    <string name="title_menu">Menu</string>
+    <string name="title_location">Restaurants</string>
+    <string name="title_profile">Profile</string>
+</resources>

@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/buttonMenu"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_margin="8dp"
+            android:background="?android:selectableItemBackgroundBorderless"
+            android:padding="14dp"
+            android:src="@drawable/ic_nav_menu"
+            app:layout_constraintBottom_toBottomOf="@id/appBar"
+            app:layout_constraintLeft_toLeftOf="@id/appBar"
+            app:layout_constraintTop_toTopOf="@id/appBar" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageViewLogo"
+            android:layout_width="150dp"
+            android:layout_height="0dp"
+            android:padding="4dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/logo"
+            app:layout_constraintBottom_toBottomOf="@id/appBar"
+            app:layout_constraintLeft_toLeftOf="@id/appBar"
+            app:layout_constraintRight_toRightOf="@id/appBar"
+            app:layout_constraintTop_toTopOf="@id/appBar" />
+
+        <ImageView
+            android:id="@+id/buttonCart"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_margin="8dp"
+            android:background="?android:selectableItemBackgroundBorderless"
+            android:padding="14dp"
+            android:src="@drawable/ic_basket"
+            app:layout_constraintBottom_toBottomOf="@id/appBar"
+            app:layout_constraintEnd_toEndOf="@id/appBar"
+            app:layout_constraintTop_toTopOf="@id/appBar" />
+
+        <ImageView
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/personalText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:layout_marginBottom="4dp"
+            android:text="Personal information"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/appBar" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/userNameLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="16dp"
+            android:elevation="6dp"
+            android:hint="Name"
+            app:endIconMode="clear_text"
+            app:layout_constraintTop_toBottomOf="@id/personalText">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/userNameEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:maxLength="30" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/phoneLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="16dp"
+            android:elevation="6dp"
+            android:hint="Phone number"
+            app:endIconMode="clear_text"
+            app:layout_constraintTop_toBottomOf="@id/userNameLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/phoneEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:maxLength="30" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="134dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="8dp"
+            android:alpha=".8"
+            android:background="@drawable/background_back2"
+            app:layout_constraintBottom_toBottomOf="@id/phoneLayout"
+            app:layout_constraintLeft_toLeftOf="@id/phoneLayout"
+            app:layout_constraintRight_toRightOf="@id/phoneLayout"
+            app:layout_constraintTop_toTopOf="@id/userNameLayout" />
+
+        <TextView
+            android:id="@+id/securityText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:text="SECURITY"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/phoneLayout" />
+
+        <ImageView
+            android:id="@+id/securityBack"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/background_back2"
+            app:layout_constraintTop_toBottomOf="@id/securityText" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login and PIN settings"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@id/securityBack"
+            app:layout_constraintHorizontal_bias=".1"
+            app:layout_constraintLeft_toLeftOf="@id/securityBack"
+            app:layout_constraintRight_toRightOf="@id/securityBack"
+            app:layout_constraintTop_toTopOf="@id/securityBack" />
+
+
+        <TextView
+            android:id="@+id/deliveryText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:text="Delivery address"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/securityBack" />
+
+
+        <ImageView
+            android:id="@+id/deliveryBack"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/background_back2"
+            app:layout_constraintTop_toBottomOf="@id/deliveryText" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select on map"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@id/deliveryBack"
+            app:layout_constraintLeft_toLeftOf="@id/deliveryBack"
+            app:layout_constraintRight_toRightOf="@id/deliveryBack"
+            app:layout_constraintTop_toTopOf="@id/deliveryBack" />
+
+        <TextView
+            android:id="@+id/feedbackText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:text="Feedback"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/deliveryBack" />
+
+
+        <ImageView
+            android:id="@+id/feedbackBack"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/background_back2"
+            app:layout_constraintTop_toBottomOf="@id/feedbackText" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Leave feedback"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@id/feedbackBack"
+            app:layout_constraintLeft_toLeftOf="@id/feedbackBack"
+            app:layout_constraintRight_toRightOf="@id/feedbackBack"
+            app:layout_constraintTop_toTopOf="@id/feedbackBack" />
+
+        <ImageView
+            android:id="@+id/saveBtn"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/background_back4"
+
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/feedbackBack" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Save changes"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/saveBtn"
+            app:layout_constraintLeft_toLeftOf="@id/saveBtn"
+            app:layout_constraintRight_toRightOf="@id/saveBtn"
+            app:layout_constraintTop_toTopOf="@id/saveBtn" />
+
+        <ImageView
+            android:id="@+id/leaveBtn"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/background_back2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/saveBtn" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Log out of profile"
+            android:textColor="#BC4C47"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/leaveBtn"
+            app:layout_constraintLeft_toLeftOf="@id/leaveBtn"
+            app:layout_constraintRight_toRightOf="@id/leaveBtn"
+            app:layout_constraintTop_toTopOf="@id/leaveBtn" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            app:layout_constraintTop_toBottomOf="@id/leaveBtn" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="6dp">
+
+        <TextView
+            android:id="@+id/locationName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:lines="1"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/righticon"
+
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="АЛГОРИТМ" />
+
+        <TextView
+            android:id="@+id/locationAddress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:lines="2"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toLeftOf="@id/locationName"
+            app:layout_constraintRight_toLeftOf="@id/righticon"
+            app:layout_constraintTop_toBottomOf="@id/locationName"
+            tools:text="АЛГОРИТМasggggggggggggggg\nasggg" />
+
+        <ImageView
+            android:id="@+id/righticon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="16dp"
+            android:alpha=".6"
+            android:padding="6dp"
+            android:src="@drawable/right"
+            app:layout_constraintBottom_toTopOf="@id/locationAddress"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/locationName" />
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="6dp"
+            android:alpha=".1"
+            android:background="@color/black"
+            app:layout_constraintLeft_toLeftOf="@id/locationName"
+            app:layout_constraintRight_toRightOf="@id/righticon"
+            app:layout_constraintTop_toBottomOf="@id/locationAddress" />
+
+        <ImageView
+            android:id="@+id/timeicon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/timeicon"
+            android:backgroundTint="#DE863C"
+            app:layout_constraintLeft_toLeftOf="@id/line"
+            app:layout_constraintTop_toBottomOf="@id/line" />
+
+        <TextView
+            android:id="@+id/timeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textColor="#DE863C"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/timeicon"
+            app:layout_constraintLeft_toRightOf="@id/timeicon"
+            app:layout_constraintTop_toTopOf="@id/timeicon"
+            tools:text="09:00 - 03:00" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

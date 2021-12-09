@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_nav"
+    app:startDestination="@id/homePage">
+
+    <fragment
+        android:id="@+id/homePage"
+        tools:layout="@layout/fragment_home"
+        android:name="uz.gita.fooddelivery.presentation.ui.page.HomePage"
+        android:label="HomePage" />
+    <fragment
+        android:id="@+id/favoritePage"
+        tools:layout="@layout/page_favorite"
+        android:name="uz.gita.fooddelivery.presentation.ui.page.FavoritePage"
+        android:label="FavoritePage" />
+    <fragment
+        android:id="@+id/menuPage"
+        tools:layout="@layout/page_menu"
+        android:name="uz.gita.fooddelivery.presentation.ui.page.MenuPage"
+        android:label="MenuPage" />
+    <fragment
+        android:id="@+id/profilePage"
+        tools:layout="@layout/page_profile"
+        android:name="uz.gita.fooddelivery.presentation.ui.page.ProfilePage"
+        android:label="ProfilePage" />
+    <fragment
+        android:id="@+id/locationPage"
+        tools:layout="@layout/page_location"
+        android:name="uz.gita.fooddelivery.presentation.ui.page.LocationPage"
+        android:label="LocationPage" />
+</navigation>
